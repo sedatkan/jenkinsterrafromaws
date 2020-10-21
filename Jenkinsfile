@@ -13,8 +13,10 @@ pipeline {
         sh 'echo started'  
         sh  'terraform init'
         sh  'terraform validate'
-        sh 'terraform plan -no-color -out=create.tfplan' 
-      }
+        sh  'terraform plan -no-color -out=create.tfplan' 
+        sh  'terrafrom apply'
+        input ('Execute plan')        
+}
     }
   
     stage ('Terraform Apply') {
