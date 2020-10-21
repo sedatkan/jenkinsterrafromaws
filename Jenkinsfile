@@ -14,7 +14,7 @@ pipeline {
         sh  'terraform init'
         sh  'terraform validate'
         sh  'terraform plan -no-color -out=create.tfplan' 
-        sh  'terrafrom apply'
+        sh  'terraform apply'
         input ('Execute plan')        
 }
     }
