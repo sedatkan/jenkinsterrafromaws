@@ -19,9 +19,9 @@ pipeline {
 }
     }
   
-    stage ('Terraform Apply') {
+    stage ('Terraform Destroy') {
       steps{
-      sh "terraform validate"
+      sh "terraform destroy"
       }
           
       }
