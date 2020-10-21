@@ -12,7 +12,7 @@ pipeline {
         
         sh 'echo started'  
         sh  'terraform init'
-        sh  'terrafrom validate'
+        sh  'terraform validate'
         sh 'terraform plan -no-color -out=create.tfplan' 
       }
     }
